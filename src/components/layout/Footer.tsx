@@ -9,50 +9,36 @@ import {
   Mail,
   Clock,
   ArrowRight,
-  GraduationCap,
 } from "lucide-react";
 
 export const Footer: React.FC = () => {
   return (
     <footer className="bg-gray-950 text-gray-300 border-t border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-20">
-        {/* Prominent Full-Width Student Identification Card */}
-        <div className="mb-14 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-blue-950/90 via-indigo-950/70 to-slate-900 border-2 border-blue-500/50 shadow-2xl shadow-blue-500/10 flex flex-col lg:flex-row items-center justify-between gap-6">
-          <div className="flex items-center gap-5 w-full lg:w-auto">
-            <div className="w-16 h-16 rounded-2xl bg-gradient-to-tr from-blue-600 to-indigo-500 text-white flex items-center justify-center shrink-0 shadow-lg shadow-blue-500/30 ring-4 ring-blue-500/20">
-              <GraduationCap className="w-9 h-9" />
+        {/* Aesthetic Student Signature Card */}
+        <div className="mb-14 p-6 sm:p-7 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-950 border border-slate-800 shadow-md flex flex-col sm:flex-row items-center justify-between gap-5">
+          <div className="flex items-center gap-4 text-left w-full sm:w-auto">
+            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-600 text-white flex items-center justify-center font-bold text-sm shadow-md ring-1 ring-white/10 shrink-0">
+              FA
             </div>
-            <div className="space-y-1">
-              <div className="inline-flex items-center gap-2 px-3 py-0.5 rounded-full bg-blue-500/20 text-blue-300 text-xs font-bold uppercase tracking-wider border border-blue-400/30">
-                PROYEK MAHASISWA PRAKTIKUM
-              </div>
-              <h2 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
+            <div>
+              <p className="text-[11px] font-medium tracking-wider uppercase text-blue-400">
+                Tugas Praktikum 4 — Pemrograman Front-End
+              </p>
+              <h3 className="text-lg font-bold text-white tracking-tight mt-0.5">
                 {companyProfile.studentInfo.name}
-              </h2>
-              <div className="flex flex-wrap items-center gap-2 sm:gap-3 text-sm">
-                <span className="font-mono bg-blue-900/60 text-blue-200 px-2.5 py-0.5 rounded-md font-bold border border-blue-400/30">
-                  NIM: {companyProfile.studentInfo.nim}
-                </span>
-                <span className="text-gray-400">•</span>
-                <span className="text-gray-200 font-semibold">
-                  {companyProfile.studentInfo.university}
-                </span>
-              </div>
+              </h3>
+              <p className="text-xs text-slate-400 font-mono mt-0.5">
+                NIM: {companyProfile.studentInfo.nim} &bull; S1 Teknik Informatika &bull; {companyProfile.studentInfo.university}
+              </p>
             </div>
           </div>
 
-          <div className="w-full lg:w-auto flex flex-col sm:flex-row items-start sm:items-center gap-3 justify-end pt-4 lg:pt-0 border-t lg:border-t-0 border-gray-800">
-            <div className="px-5 py-3 rounded-2xl bg-black/40 border border-blue-400/20 text-xs space-y-1 w-full sm:w-auto">
-              <span className="block text-gray-400 font-bold uppercase text-[10px] tracking-wider">
-                Mata Kuliah &amp; Tugas
-              </span>
-              <p className="font-bold text-white text-sm">
-                {companyProfile.studentInfo.class}
-              </p>
-              <p className="text-blue-300 font-medium text-xs">
-                {companyProfile.studentInfo.assignment}
-              </p>
-            </div>
+          <div className="shrink-0 flex items-center gap-2">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-800/80 border border-slate-700/80 text-xs text-slate-300 font-medium">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+              <span>Next.js App Router</span>
+            </span>
           </div>
         </div>
 
@@ -64,7 +50,7 @@ export const Footer: React.FC = () => {
               href="/"
               className="inline-flex items-center gap-2.5 group focus:outline-none"
             >
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-cyan-500 flex items-center justify-center text-white shadow-md shadow-blue-500/25">
+              <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-blue-700 flex items-center justify-center text-white shadow-md shadow-blue-500/20">
                 <Sparkles className="w-5 h-5" />
               </div>
               <span className="font-bold text-xl text-white tracking-tight">
@@ -72,7 +58,7 @@ export const Footer: React.FC = () => {
               </span>
             </Link>
             <p className="text-sm text-gray-400 leading-relaxed max-w-sm">
-              {companyProfile.tagline}. Solusi rekayasa perangkat lunak berkelas dunia untuk mempercepat pertumbuhan bisnis Anda.
+              {companyProfile.tagline}. Solusi website responsif dan modern untuk perkembangan bisnis Anda.
             </p>
 
             <div className="pt-2 space-y-2 text-xs text-gray-400">
@@ -82,7 +68,7 @@ export const Footer: React.FC = () => {
               </div>
               <div className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-blue-400 shrink-0" />
-                <span>{companyProfile.phone} / WA: {companyProfile.whatsapp}</span>
+                <span>WhatsApp: {companyProfile.whatsapp}</span>
               </div>
               <div className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-blue-400 shrink-0" />
@@ -142,7 +128,7 @@ export const Footer: React.FC = () => {
             &copy; {new Date().getFullYear()} {companyProfile.name}. All rights reserved.
           </p>
           <p className="flex items-center gap-1 text-gray-400">
-            Dibuat oleh <span className="text-blue-400 font-semibold">{companyProfile.studentInfo.name} ({companyProfile.studentInfo.nim})</span> — {companyProfile.studentInfo.university}
+            Dibuat oleh <span className="text-slate-200 font-medium">{companyProfile.studentInfo.name} ({companyProfile.studentInfo.nim})</span> &bull; {companyProfile.studentInfo.university}
           </p>
         </div>
       </div>

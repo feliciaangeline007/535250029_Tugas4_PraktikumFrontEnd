@@ -14,7 +14,6 @@ import {
   Users,
   Lightbulb,
   Star,
-  GraduationCap,
 } from "lucide-react";
 
 // Pemetaan icon untuk nilai-nilai studio
@@ -38,25 +37,18 @@ export default function HomePage() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col items-center text-center max-w-4xl mx-auto space-y-6">
-            {/* Banner Identitas Mahasiswa di Bagian Atas Hero */}
-            <div className="inline-flex flex-wrap items-center justify-center gap-2.5 sm:gap-3.5 px-5 py-2.5 rounded-2xl bg-white/95 dark:bg-gray-900/95 border-2 border-blue-500/40 shadow-xl shadow-blue-500/10 text-xs backdrop-blur-md">
-              <div className="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 font-bold uppercase tracking-wider text-[11px] bg-blue-50 dark:bg-blue-950/70 px-2.5 py-1 rounded-lg border border-blue-200 dark:border-blue-900">
-                <GraduationCap className="w-4 h-4" />
-                <span>Project Mahasiswa</span>
+            {/* Aesthetic Student Creator Pill */}
+            <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/80 dark:bg-gray-900/80 border border-gray-200/90 dark:border-gray-800 shadow-sm backdrop-blur-md hover:border-gray-300 dark:hover:border-gray-700 transition-all">
+              <div className="w-5 h-5 rounded-full bg-gradient-to-br from-blue-600 to-indigo-600 text-white flex items-center justify-center text-[9px] font-extrabold shadow-sm">
+                FA
               </div>
-              <span className="font-extrabold text-gray-900 dark:text-white text-sm sm:text-base tracking-tight">
-                {companyProfile.studentInfo.name}
-              </span>
-              <span className="font-mono bg-blue-600 text-white px-2.5 py-0.5 rounded-md font-bold text-xs shadow-sm">
-                NIM: {companyProfile.studentInfo.nim}
-              </span>
-              <span className="text-gray-400 hidden sm:inline">•</span>
-              <span className="text-gray-700 dark:text-gray-200 font-semibold hidden sm:inline">
-                {companyProfile.studentInfo.university}
-              </span>
-              <span className="px-2.5 py-0.5 rounded-lg bg-emerald-50 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 font-bold text-[11px] border border-emerald-200 dark:border-emerald-800 hidden md:inline">
-                Tugas Praktikum 4
-              </span>
+              <div className="flex items-center gap-2 text-xs">
+                <span className="font-semibold text-gray-800 dark:text-gray-200">{companyProfile.studentInfo.name}</span>
+                <span className="text-gray-300 dark:text-gray-700">&bull;</span>
+                <span className="font-mono text-gray-500 dark:text-gray-400 text-[11px]">{companyProfile.studentInfo.nim}</span>
+                <span className="text-gray-300 dark:text-gray-700 hidden sm:inline">&bull;</span>
+                <span className="text-blue-600 dark:text-blue-400 font-medium text-[11px] hidden sm:inline">{companyProfile.studentInfo.university}</span>
+              </div>
             </div>
 
             {/* Judul Utama Hero */}

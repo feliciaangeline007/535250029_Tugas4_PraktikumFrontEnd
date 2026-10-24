@@ -14,7 +14,6 @@ import {
   CheckCircle2,
   Building2,
   Calendar,
-  GraduationCap,
   ArrowRight,
 } from "lucide-react";
 
@@ -117,21 +116,46 @@ export default function AboutPage() {
             </div>
           </div>
 
-          {/* Kartu Informasi Akademik Mahasiswa */}
-          <div className="bg-slate-50 dark:bg-gray-950 p-6 rounded-2xl border-2 border-blue-500/30 space-y-4 shadow-sm">
-            <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400 font-bold text-xs uppercase tracking-wider">
-              <GraduationCap className="w-4 h-4" />
-              <span>Identitas Mahasiswa Pengembang</span>
+          {/* Kartu Informasi Mahasiswa yang Estetik */}
+          <div className="p-6 sm:p-7 rounded-2xl bg-gradient-to-br from-white to-slate-50/80 dark:from-gray-900 dark:to-gray-950 border border-gray-200/90 dark:border-gray-800 shadow-sm space-y-5">
+            <div className="flex items-center gap-3.5">
+              <div className="w-11 h-11 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-600 text-white flex items-center justify-center font-bold text-sm shadow-md shadow-blue-500/15">
+                FA
+              </div>
+              <div>
+                <span className="text-[10px] font-semibold tracking-wider uppercase text-blue-600 dark:text-blue-400 block">
+                  Identitas Pengembang
+                </span>
+                <h3 className="text-lg font-bold text-gray-900 dark:text-white leading-tight">
+                  {companyProfile.studentInfo.name}
+                </h3>
+              </div>
             </div>
-            <div className="space-y-1.5 text-xs text-gray-700 dark:text-gray-300 font-mono bg-white dark:bg-gray-900 p-4 rounded-xl border border-gray-200 dark:border-gray-800">
-              <p><strong className="text-gray-900 dark:text-white font-sans">Nama Mahasiswa :</strong> {companyProfile.studentInfo.name}</p>
-              <p><strong className="text-gray-900 dark:text-white font-sans">NIM            :</strong> {companyProfile.studentInfo.nim}</p>
-              <p><strong className="text-gray-900 dark:text-white font-sans">Program Studi  :</strong> S1 Teknik Informatika</p>
-              <p><strong className="text-gray-900 dark:text-white font-sans">Kampus         :</strong> {companyProfile.studentInfo.university}</p>
-              <p><strong className="text-gray-900 dark:text-white font-sans">Mata Kuliah    :</strong> {companyProfile.studentInfo.class}</p>
-              <p className="pt-2 border-t border-gray-200 dark:border-gray-800 text-blue-600 dark:text-blue-400 font-semibold font-sans">
-                {companyProfile.studentInfo.assignment}
-              </p>
+
+            <div className="grid grid-cols-2 gap-3 pt-3 border-t border-gray-100 dark:border-gray-800 text-xs">
+              <div className="space-y-0.5">
+                <span className="text-[10px] uppercase text-gray-400 font-semibold">NIM</span>
+                <p className="font-mono font-bold text-gray-900 dark:text-white">{companyProfile.studentInfo.nim}</p>
+              </div>
+              <div className="space-y-0.5">
+                <span className="text-[10px] uppercase text-gray-400 font-semibold">Program Studi</span>
+                <p className="font-medium text-gray-800 dark:text-gray-200">S1 Teknik Informatika</p>
+              </div>
+              <div className="space-y-0.5">
+                <span className="text-[10px] uppercase text-gray-400 font-semibold">Perguruan Tinggi</span>
+                <p className="font-medium text-gray-800 dark:text-gray-200">{companyProfile.studentInfo.university}</p>
+              </div>
+              <div className="space-y-0.5">
+                <span className="text-[10px] uppercase text-gray-400 font-semibold">Mata Kuliah</span>
+                <p className="font-medium text-gray-800 dark:text-gray-200">{companyProfile.studentInfo.class}</p>
+              </div>
+            </div>
+
+            <div className="pt-3 border-t border-gray-100 dark:border-gray-800">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-950/60 text-blue-700 dark:text-blue-300 text-[11px] font-medium border border-blue-200/60 dark:border-blue-900/40">
+                <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
+                <span>{companyProfile.studentInfo.assignment}</span>
+              </span>
             </div>
           </div>
         </div>
