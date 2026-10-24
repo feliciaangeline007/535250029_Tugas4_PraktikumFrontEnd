@@ -1,6 +1,7 @@
 import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { companyProfile } from "@/data/company";
 import { teamData } from "@/data/team";
 import { TeamCard } from "@/components/common/TeamCard";
@@ -115,8 +116,13 @@ export default function AboutPage() {
         <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-slate-900 via-gray-900 to-slate-950 text-white p-7 sm:p-10 lg:p-12 border border-slate-800 shadow-xl">
           <div className="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
-              <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center font-bold text-2xl sm:text-3xl shadow-xl shadow-blue-500/20 ring-4 ring-white/10 shrink-0">
-                FA
+              <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden shadow-xl shadow-blue-500/20 ring-4 ring-white/10 shrink-0 bg-indigo-950">
+                <Image
+                  src="/avatars/felicia.svg"
+                  alt="Felicia Angeline"
+                  fill
+                  className="object-cover"
+                />
               </div>
               <div className="space-y-1.5">
                 <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-blue-500/20 text-blue-300 text-[11px] font-semibold border border-blue-400/30">

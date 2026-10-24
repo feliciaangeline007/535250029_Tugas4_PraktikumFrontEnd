@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <!-- Background pastel lilac-blue circle -->
+  <rect width="120" height="120" rx="32" fill="url(#bg_felicia)" />
+  
+  <!-- Subtle decorative spark / star -->
+  <path d="M96 22L98 27L103 29L98 31L96 36L94 31L89 29L94 27L96 22Z" fill="#818CF8" opacity="0.6"/>
+  <circle cx="24" cy="36" r="3" fill="#60A5FA" opacity="0.5"/>
+
+  <!-- Body / Shoulders -->
+  <path d="M28 120C28 98 42 88 60 88C78 88 92 98 92 120H28Z" fill="#4F46E5"/>
+  <!-- Collar / Shirt Detail -->
+  <path d="M52 88L60 98L68 88H52Z" fill="#EEF2FF"/>
+  <path d="M60 88V98" stroke="#C7D2FE" stroke-width="2"/>
+
+  <!-- Neck -->
+  <rect x="53" y="74" width="14" height="18" rx="4" fill="#FCD34D"/>
+  <!-- Shadow under chin -->
+  <path d="M53 78C56 82 64 82 67 78V84H53V78Z" fill="#F59E0B" opacity="0.3"/>
+
+  <!-- Head / Face -->
+  <rect x="42" y="38" width="36" height="42" rx="18" fill="#FDE68A"/>
+
+  <!-- Long Hair Behind -->
+  <path d="M36 46C36 32 46 22 60 22C74 22 84 32 84 46V76C84 82 78 88 72 88H48C42 88 36 82 36 76V46Z" fill="#1E1B4B"/>
+
+  <!-- Face details -->
+  <!-- Blush -->
+  <circle cx="48" cy="62" r="4" fill="#F472B6" opacity="0.4"/>
+  <circle cx="72" cy="62" r="4" fill="#F472B6" opacity="0.4"/>
+
+  <!-- Eyes (Happy closed-curve / stylish modern look) -->
+  <path d="M48 54C50 52 53 52 55 54" stroke="#1E1B4B" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M65 54C67 52 70 52 72 54" stroke="#1E1B4B" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Stylish Glasses (Modern round frames) -->
+  <circle cx="51" cy="54" r="7" stroke="#4338CA" stroke-width="2" fill="white" fill-opacity="0.2"/>
+  <circle cx="69" cy="54" r="7" stroke="#4338CA" stroke-width="2" fill="white" fill-opacity="0.2"/>
+  <path d="M58 54H62" stroke="#4338CA" stroke-width="2"/>
+
+  <!-- Nose -->
+  <path d="M60 57V60" stroke="#D97706" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Gentle Smile -->
+  <path d="M56 65C58 68 62 68 64 65" stroke="#1E1B4B" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Front Hair Bangs -->
+  <path d="M38 46C44 40 54 38 60 38C66 38 76 40 82 46C80 34 72 26 60 26C48 26 40 34 38 46Z" fill="#312E81"/>
+  <path d="M42 42C48 44 54 48 56 52C53 46 48 43 42 42Z" fill="#312E81"/>
+  <path d="M78 42C72 44 66 48 64 52C67 46 72 43 78 42Z" fill="#312E81"/>
+
+  <defs>
+    <linearGradient id="bg_felicia" x1="0" y1="0" x2="120" y2="120" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E0E7FF"/>
+      <stop offset="1" stop-color="#DDD6FE"/>
+    </linearGradient>
+  </defs>
+</svg>

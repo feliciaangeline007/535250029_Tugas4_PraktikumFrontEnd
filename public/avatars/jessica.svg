@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <!-- Background pastel peach/rose -->
+  <rect width="120" height="120" rx="32" fill="url(#bg_jessica)" />
+
+  <!-- Decorative doodle elements -->
+  <circle cx="22" cy="32" r="3.5" fill="#FB7185" opacity="0.4"/>
+  <path d="M96 24L98 29L103 31L98 33L96 38L94 33L89 31L94 29L96 24Z" fill="#F43F5E" opacity="0.5"/>
+
+  <!-- High Hair Bun -->
+  <circle cx="60" cy="22" r="14" fill="#374151"/>
+
+  <!-- Body / Sweater -->
+  <path d="M26 120C26 96 40 86 60 86C80 86 94 96 94 120H26Z" fill="#BE123C"/>
+  <rect x="52" y="86" width="16" height="8" rx="3" fill="#E11D48"/>
+
+  <!-- Neck -->
+  <rect x="53" y="72" width="14" height="18" rx="4" fill="#FCD34D"/>
+
+  <!-- Head / Face -->
+  <rect x="42" y="38" width="36" height="42" rx="18" fill="#FDE68A"/>
+
+  <!-- Ponytail / Hair around face -->
+  <path d="M38 48C38 34 46 26 60 26C74 26 82 34 82 48V62C82 66 79 70 76 70C74 70 73 68 73 64V48C73 40 68 34 60 34C52 34 47 40 47 48V64C47 68 46 70 44 70C41 70 38 66 38 62V48Z" fill="#374151"/>
+
+  <!-- Eyes with small lashes -->
+  <path d="M47 52C49 50 53 50 55 52" stroke="#1F2937" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M65 52C67 50 71 50 73 52" stroke="#1F2937" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="51" cy="54" r="2.5" fill="#1F2937"/>
+  <circle cx="69" cy="54" r="2.5" fill="#1F2937"/>
+
+  <!-- Cute Blush -->
+  <circle cx="47" cy="61" r="3.5" fill="#FDA4AF" opacity="0.5"/>
+  <circle cx="73" cy="61" r="3.5" fill="#FDA4AF" opacity="0.5"/>
+
+  <!-- Nose -->
+  <path d="M60 56V59" stroke="#D97706" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Sweet Smile -->
+  <path d="M56 64C58 67 62 67 64 64" stroke="#1F2937" stroke-width="2" stroke-linecap="round"/>
+
+  <defs>
+    <linearGradient id="bg_jessica" x1="0" y1="0" x2="120" y2="120" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF1F2"/>
+      <stop offset="1" stop-color="#FFE4E6"/>
+    </linearGradient>
+  </defs>
+</svg>

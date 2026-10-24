@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { companyProfile, navigationItems } from "@/data/company";
 import { servicesData } from "@/data/services";
 import {
@@ -18,8 +19,13 @@ export const Footer: React.FC = () => {
         {/* Aesthetic Student Signature Card */}
         <div className="mb-14 p-6 sm:p-7 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-950 border border-slate-800 shadow-md flex flex-col sm:flex-row items-center justify-between gap-5">
           <div className="flex items-center gap-4 text-left w-full sm:w-auto">
-            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-600 text-white flex items-center justify-center font-bold text-sm shadow-md ring-1 ring-white/10 shrink-0">
-              FA
+            <div className="relative w-14 h-14 rounded-2xl overflow-hidden shadow-md ring-1 ring-white/10 shrink-0 bg-indigo-950">
+              <Image
+                src="/avatars/felicia.svg"
+                alt="Felicia Angeline"
+                fill
+                className="object-cover"
+              />
             </div>
             <div>
               <p className="text-[11px] font-medium tracking-wider uppercase text-blue-400">

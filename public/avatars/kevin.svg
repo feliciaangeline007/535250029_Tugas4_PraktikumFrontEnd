@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <!-- Background pastel sky blue -->
+  <rect width="120" height="120" rx="32" fill="url(#bg_kevin)" />
+
+  <!-- Decorative shapes -->
+  <circle cx="20" cy="26" r="3" fill="#38BDF8" opacity="0.5"/>
+  <rect x="94" y="24" width="7" height="7" rx="2" transform="rotate(20 94 24)" fill="#0284C7" opacity="0.3"/>
+
+  <!-- Body / Denim Jacket -->
+  <path d="M26 120C26 96 40 86 60 86C80 86 94 96 94 120H26Z" fill="#0369A1"/>
+  <path d="M48 86L60 98L72 86H48Z" fill="#F0F9FF"/>
+
+  <!-- Neck -->
+  <rect x="53" y="72" width="14" height="18" rx="4" fill="#FCD34D"/>
+
+  <!-- Head / Face -->
+  <rect x="42" y="38" width="36" height="42" rx="18" fill="#FDE68A"/>
+
+  <!-- Modern Hair Quiff -->
+  <path d="M38 46C38 32 46 22 60 22C68 22 76 25 80 32C84 38 82 46 82 46C76 42 68 40 60 40C52 40 44 42 38 46Z" fill="#18181B"/>
+
+  <!-- Square Modern Glasses -->
+  <rect x="44" y="48" width="13" height="11" rx="3" stroke="#0284C7" stroke-width="2" fill="white" fill-opacity="0.2"/>
+  <rect x="63" y="48" width="13" height="11" rx="3" stroke="#0284C7" stroke-width="2" fill="white" fill-opacity="0.2"/>
+  <path d="M57 53H63" stroke="#0284C7" stroke-width="2"/>
+
+  <!-- Eyes behind glasses -->
+  <circle cx="50.5" cy="53.5" r="2" fill="#18181B"/>
+  <circle cx="69.5" cy="53.5" r="2" fill="#18181B"/>
+
+  <!-- Nose -->
+  <path d="M60 56V59" stroke="#D97706" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Confident Smile -->
+  <path d="M55 64C57 67 63 67 65 64" stroke="#18181B" stroke-width="2" stroke-linecap="round"/>
+
+  <defs>
+    <linearGradient id="bg_kevin" x1="0" y1="0" x2="120" y2="120" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F0F9FF"/>
+      <stop offset="1" stop-color="#E0F2FE"/>
+    </linearGradient>
+  </defs>
+</svg>

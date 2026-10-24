@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <rect width="100" height="100" rx="28" fill="#FEF3C7"/>
+  <!-- Body / Apron -->
+  <path d="M22 100C22 80 34 72 50 72C66 72 78 80 78 100H22Z" fill="#78350F"/>
+  <rect x="42" y="72" width="16" height="28" fill="#FDE68A"/>
+  <!-- Neck -->
+  <rect x="44" y="60" width="12" height="14" rx="3" fill="#FCD34D"/>
+  <!-- Head -->
+  <rect x="35" y="32" width="30" height="34" rx="15" fill="#FDE68A"/>
+  <!-- Hair & Cap -->
+  <path d="M30 40C30 26 38 18 50 18C62 18 70 26 70 40H30Z" fill="#92400E"/>
+  <rect x="28" y="36" width="44" height="6" rx="3" fill="#B45309"/>
+  <!-- Eyes -->
+  <circle cx="43" cy="46" r="2" fill="#1F2937"/>
+  <circle cx="57" cy="46" r="2" fill="#1F2937"/>
+  <!-- Smile -->
+  <path d="M46 54C48 57 52 57 54 54" stroke="#1F2937" stroke-width="2" stroke-linecap="round"/>
+</svg>

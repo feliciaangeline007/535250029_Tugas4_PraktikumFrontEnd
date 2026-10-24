@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { navigationItems, companyProfile } from "@/data/company";
 import { Button } from "@/components/ui/Button";
@@ -111,9 +112,14 @@ export const Navbar: React.FC = () => {
             {/* Right Action / CTA & Student Monogram */}
             <div className="hidden md:flex items-center gap-4">
               {/* Aesthetic Student Monogram Tag */}
-              <div className="hidden lg:flex items-center gap-2 pl-3 py-1 pr-2 rounded-full bg-gray-50 dark:bg-gray-800/80 border border-gray-200/80 dark:border-gray-700/80 text-xs">
-                <div className="w-6 h-6 rounded-full bg-gradient-to-tr from-blue-600 to-indigo-600 text-white flex items-center justify-center font-bold text-[10px] shadow-sm">
-                  FA
+              <div className="hidden lg:flex items-center gap-2 pl-2.5 py-1 pr-2.5 rounded-full bg-gray-50 dark:bg-gray-800/80 border border-gray-200/80 dark:border-gray-700/80 text-xs">
+                <div className="relative w-7 h-7 rounded-full overflow-hidden shadow-sm shrink-0">
+                  <Image
+                    src="/avatars/felicia.svg"
+                    alt="Felicia Angeline"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
                 <div className="flex flex-col pr-1">
                   <span className="font-semibold text-gray-800 dark:text-gray-200 text-xs leading-none">
@@ -160,8 +166,13 @@ export const Navbar: React.FC = () => {
           <div className="md:hidden border-b border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 px-4 pt-3 pb-6 space-y-2 animate-fadeIn shadow-lg">
             {/* Student Tag inside Mobile Menu */}
             <div className="flex items-center gap-2.5 p-2.5 mb-2 rounded-xl bg-gray-50 dark:bg-gray-800/60 border border-gray-200/80 dark:border-gray-700/80">
-              <div className="w-7 h-7 rounded-full bg-gradient-to-tr from-blue-600 to-indigo-600 text-white flex items-center justify-center font-bold text-xs shrink-0 shadow-sm">
-                FA
+              <div className="relative w-8 h-8 rounded-full overflow-hidden shrink-0 shadow-sm">
+                <Image
+                  src="/avatars/felicia.svg"
+                  alt="Felicia Angeline"
+                  fill
+                  className="object-cover"
+                />
               </div>
               <div className="flex flex-col">
                 <span className="font-bold text-xs text-gray-900 dark:text-white leading-tight">

@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { companyProfile, companyStats, companyValues, testimonials } from "@/data/company";
 import { servicesData } from "@/data/services";
 import { ServiceCard } from "@/components/common/ServiceCard";
@@ -188,8 +189,14 @@ export default function HomePage() {
               </div>
 
               <div className="flex items-center gap-3 pt-5 mt-5 border-t border-gray-100 dark:border-gray-800">
-                <div className="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900 flex items-center justify-center text-blue-600 font-bold text-sm">
-                  {item.clientName.charAt(0)}
+                <div className="relative w-11 h-11 rounded-xl overflow-hidden shrink-0 shadow-sm border border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-800">
+                  <Image
+                    src={item.avatarUrl}
+                    alt={item.clientName}
+                    fill
+                    className="object-cover"
+                    sizes="44px"
+                  />
                 </div>
                 <div>
                   <h4 className="text-sm font-bold text-gray-900 dark:text-white">

@@ -92,7 +92,7 @@ export const testimonials: Testimonial[] = [
     companyName: "Kopi Nusantara Roastery",
     content:
       "Website profil dan menu online yang dibuatkan sangat membantu pelanggan kami melihat katalog kopi lokal sebelum datang ke kedai. Tampilannya simpel, bersih, dan loading-nya cepat banget di HP.",
-    avatarUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80",
+    avatarUrl: "/avatars/client1.svg",
     rating: 5,
   },
   {
@@ -102,7 +102,7 @@ export const testimonials: Testimonial[] = [
     companyName: "Batik Canting Cantik",
     content:
       "Tim sangat komunikatif saat mendiskusikan konsep tampilan. Hasil landing page promosi bazar kami rapi dan tombol langsung ke WhatsApp membuat chat dari calon pembeli naik signifikan.",
-    avatarUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80",
+    avatarUrl: "/avatars/client2.svg",
     rating: 5,
   },
   {
@@ -112,7 +112,7 @@ export const testimonials: Testimonial[] = [
     companyName: "Bengkel Prima Motor",
     content:
       "Sekarang bengkel kami punya profil resmi di internet. Pelanggan bisa cek lokasi dan daftar servis motor dengan gampang. Pengerjaannya tepat waktu sesuai jadwal.",
-    avatarUrl: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80",
+    avatarUrl: "/avatars/client3.svg",
     rating: 5,
   },
 ];
