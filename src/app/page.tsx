@@ -214,11 +214,11 @@ export default function HomePage() {
               Diskusikan ide dan kebutuhan platform digital Anda dengan tim ahli kami. Kami siap memberikan penawaran terbaik dan rancangan arsitektur yang solid.
             </p>
             <div className="pt-4 flex flex-wrap gap-3">
-              <Button href="/contact" variant="secondary" size="lg">
+              <Button href="/contact" variant="secondary" size="lg" className="bg-white text-blue-700 hover:bg-blue-50 border-none shadow-lg">
                 <span>Hubungi Kami Sekarang</span>
                 <ArrowRight className="w-4 h-4" />
               </Button>
-              <Button href="/about" variant="ghost" size="lg" className="text-white hover:bg-white/10">
+              <Button href="/about" variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10 hover:border-white">
                 <span>Pelajari Profil Tim</span>
               </Button>
             </div>

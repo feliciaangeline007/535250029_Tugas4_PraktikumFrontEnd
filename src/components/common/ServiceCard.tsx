@@ -70,10 +70,10 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
         </span>
         <Link
           href={`/services/${service.slug}`}
-          className="inline-flex items-center gap-1.5 text-sm font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 group/link"
+          className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-lg bg-blue-50/90 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-600 dark:hover:text-white transition-all duration-200 shadow-sm hover:shadow-md hover:shadow-blue-500/20 hover:-translate-y-0.5 group/link"
         >
-          <span>Pelajari Selengkapnya</span>
-          <ArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />
+          <span>Detail Layanan</span>
+          <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover/link:translate-x-1" />
         </Link>
       </div>
     </div>

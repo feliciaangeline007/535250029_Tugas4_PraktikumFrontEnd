@@ -18,23 +18,27 @@ export const Button: React.FC<ButtonProps> = ({
   ...props
 }) => {
   const baseStyles =
-    "inline-flex items-center justify-center font-medium transition-all duration-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none active:scale-[0.98]";
+    "group relative inline-flex items-center justify-center font-semibold rounded-xl overflow-hidden cursor-pointer select-none transition-all duration-300 ease-out focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none active:scale-[0.96] active:translate-y-0";
+
+  // Subtle glass shimmer / sheen glide on hover
+  const shimmerEffect =
+    "before:absolute before:inset-0 before:-translate-x-full hover:before:translate-x-full before:bg-gradient-to-r before:from-transparent before:via-white/25 before:to-transparent before:transition-transform before:duration-700 before:ease-in-out";
 
   const variantStyles = {
     primary:
-      "bg-blue-600 text-white hover:bg-blue-700 shadow-md shadow-blue-500/20 focus:ring-blue-500",
+      `bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 text-white shadow-md shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/35 hover:-translate-y-0.5 focus:ring-blue-500 ${shimmerEffect}`,
     secondary:
-      "bg-gray-100 text-gray-900 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-100 dark:hover:bg-gray-700 focus:ring-gray-400",
+      "bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 border border-gray-200/90 dark:border-gray-700 shadow-sm hover:shadow-md hover:border-gray-300 dark:hover:border-gray-600 hover:bg-gray-50/80 dark:hover:bg-gray-700/80 hover:-translate-y-0.5 focus:ring-gray-400",
     outline:
-      "border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/80 focus:ring-gray-400",
+      "border-2 border-blue-600/40 dark:border-blue-500/40 text-blue-600 dark:text-blue-400 bg-blue-50/40 dark:bg-blue-950/20 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-600 dark:hover:text-white hover:border-blue-600 hover:shadow-lg hover:shadow-blue-500/25 hover:-translate-y-0.5 focus:ring-blue-500",
     ghost:
-      "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 focus:ring-gray-400",
+      "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50/70 dark:hover:bg-gray-800/80 focus:ring-blue-400 active:bg-blue-100",
   };
 
   const sizeStyles = {
-    sm: "text-xs px-3 py-1.5 gap-1.5",
-    md: "text-sm px-4 py-2.5 gap-2",
-    lg: "text-base px-6 py-3.5 gap-2.5 font-semibold",
+    sm: "text-xs px-3.5 py-2 gap-1.5",
+    md: "text-sm px-5 py-2.5 gap-2",
+    lg: "text-base px-7 py-3.5 gap-2.5 font-bold tracking-wide",
   };
 
   const combinedClasses = `${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${className}`;
@@ -42,14 +46,14 @@ export const Button: React.FC<ButtonProps> = ({
   if (href) {
     return (
       <Link href={href} className={combinedClasses}>
-        {children}
+        <span className="relative z-10 flex items-center justify-center gap-2 w-full">{children}</span>
       </Link>
     );
   }
 
   return (
     <button className={combinedClasses} {...props}>
-      {children}
+      <span className="relative z-10 flex items-center justify-center gap-2 w-full">{children}</span>
     </button>
   );
 };

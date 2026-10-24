@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { navigationItems, companyProfile } from "@/data/company";
+import { Button } from "@/components/ui/Button";
 import { Menu, X, ArrowUpRight, Sparkles } from "lucide-react";
 
 export const Navbar: React.FC = () => {
@@ -86,13 +87,15 @@ export const Navbar: React.FC = () => {
 
           {/* Right Action / CTA */}
           <div className="hidden md:flex items-center gap-3">
-            <Link
+            <Button
               href="/contact"
-              className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider bg-blue-600 hover:bg-blue-700 text-white px-4 py-2.5 rounded-lg shadow-sm shadow-blue-500/20 hover:shadow-md transition-all active:scale-[0.98]"
+              variant="primary"
+              size="sm"
+              className="uppercase tracking-wider text-[11px] font-bold"
             >
               <span>Mulai Konsultasi</span>
-              <ArrowUpRight className="w-4 h-4" />
-            </Link>
+              <ArrowUpRight className="w-3.5 h-3.5" />
+            </Button>
           </div>
 
           {/* Mobile Hamburger Button */}
@@ -140,13 +143,15 @@ export const Navbar: React.FC = () => {
           </div>
 
           <div className="pt-4 border-t border-gray-100 dark:border-gray-800">
-            <Link
+            <Button
               href="/contact"
-              className="w-full flex items-center justify-center gap-2 text-sm font-semibold bg-blue-600 text-white py-3 rounded-lg shadow-sm"
+              variant="primary"
+              size="md"
+              className="w-full"
             >
               <span>Hubungi Kami</span>
               <ArrowUpRight className="w-4 h-4" />
-            </Link>
+            </Button>
             <div className="mt-3 text-center text-xs text-gray-400">
               {companyProfile.studentInfo.name} • {companyProfile.studentInfo.nim}
             </div>

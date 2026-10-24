@@ -141,7 +141,7 @@ export default function ServicesPage() {
               Tim engineering kami siap membuat arsitektur spesifik untuk kebutuhan unik perusahaan Anda.
             </p>
           </div>
-          <Button href="/contact" variant="secondary" size="lg" className="shrink-0">
+          <Button href="/contact" variant="secondary" size="lg" className="shrink-0 bg-white text-blue-700 hover:bg-blue-50 border-none shadow-lg">
             <span>Konsultasi Kebutuhan Anda</span>
             <ArrowRight className="w-4 h-4" />
           </Button>
