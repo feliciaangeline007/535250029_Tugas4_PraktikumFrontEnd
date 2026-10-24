@@ -8,13 +8,13 @@ import { Badge } from "@/components/ui/Badge";
 import { Card } from "@/components/ui/Card";
 import {
   ArrowRight,
-  Sparkles,
   CheckCircle2,
   ShieldCheck,
   Award,
   Users,
   Lightbulb,
   Star,
+  GraduationCap,
 } from "lucide-react";
 
 const valueIcons: Record<string, React.ElementType> = {
@@ -37,12 +37,25 @@ export default function HomePage() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col items-center text-center max-w-4xl mx-auto space-y-6">
-            {/* Student & Course Pill */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 dark:bg-blue-950/70 border border-blue-200/80 dark:border-blue-900 text-blue-700 dark:text-blue-300 text-xs font-medium">
-              <Sparkles className="w-4 h-4 text-blue-600 dark:text-blue-400" />
-              <span>Tugas Praktikum 4 Front-End</span>
-              <span className="text-gray-400 dark:text-gray-600">•</span>
-              <span className="font-semibold">{companyProfile.studentInfo.name} ({companyProfile.studentInfo.nim})</span>
+            {/* Prominent Student & Course Badge in Hero */}
+            <div className="inline-flex flex-wrap items-center justify-center gap-2.5 sm:gap-3.5 px-5 py-2.5 rounded-2xl bg-white/95 dark:bg-gray-900/95 border-2 border-blue-500/40 shadow-xl shadow-blue-500/10 text-xs backdrop-blur-md">
+              <div className="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 font-bold uppercase tracking-wider text-[11px] bg-blue-50 dark:bg-blue-950/70 px-2.5 py-1 rounded-lg border border-blue-200 dark:border-blue-900">
+                <GraduationCap className="w-4 h-4" />
+                <span>Project Mahasiswa</span>
+              </div>
+              <span className="font-extrabold text-gray-900 dark:text-white text-sm sm:text-base tracking-tight">
+                {companyProfile.studentInfo.name}
+              </span>
+              <span className="font-mono bg-blue-600 text-white px-2.5 py-0.5 rounded-md font-bold text-xs shadow-sm">
+                NIM: {companyProfile.studentInfo.nim}
+              </span>
+              <span className="text-gray-400 hidden sm:inline">•</span>
+              <span className="text-gray-700 dark:text-gray-200 font-semibold hidden sm:inline">
+                {companyProfile.studentInfo.university}
+              </span>
+              <span className="px-2.5 py-0.5 rounded-lg bg-emerald-50 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 font-bold text-[11px] border border-emerald-200 dark:border-emerald-800 hidden md:inline">
+                Tugas Praktikum 4
+              </span>
             </div>
 
             {/* Main Headline */}

@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { navigationItems, companyProfile } from "@/data/company";
 import { Button } from "@/components/ui/Button";
-import { Menu, X, ArrowUpRight, Sparkles } from "lucide-react";
+import { Menu, X, ArrowUpRight, Sparkles, GraduationCap } from "lucide-react";
 
 export const Navbar: React.FC = () => {
   const pathname = usePathname();
@@ -34,13 +34,44 @@ export const Navbar: React.FC = () => {
   };
 
   return (
-    <header
-      className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-        scrolled
-          ? "bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-sm border-b border-gray-200/80 dark:border-gray-800"
-          : "bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-b border-gray-100 dark:border-gray-800/60"
-      }`}
-    >
+    <header className="sticky top-0 z-50 w-full">
+      {/* Top Banner: Prominent Student Project Header */}
+      <div className="bg-gradient-to-r from-blue-700 via-indigo-700 to-blue-800 text-white py-2 px-4 shadow-sm border-b border-blue-400/30">
+        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2 text-xs">
+          <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
+            <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white/20 text-white font-extrabold text-[10px] uppercase tracking-wider border border-white/30 shadow-sm">
+              <GraduationCap className="w-3.5 h-3.5" />
+              <span>Project Mahasiswa</span>
+            </span>
+            <span className="font-extrabold text-white text-sm tracking-tight">
+              Felicia Angeline
+            </span>
+            <span className="text-blue-300">•</span>
+            <span className="font-mono bg-black/30 px-2 py-0.5 rounded-md text-blue-100 font-bold border border-white/10">
+              NIM: 535250029
+            </span>
+            <span className="text-blue-300 hidden md:inline">•</span>
+            <span className="text-blue-100 font-medium hidden md:inline">
+              Universitas Tarumanagara
+            </span>
+          </div>
+
+          <div className="hidden lg:flex items-center gap-2 text-[11px] text-blue-100 font-medium">
+            <span className="bg-white/15 px-3 py-0.5 rounded-full border border-white/20 font-semibold">
+              Tugas Praktikum 4 — Dynamic Routing &amp; Reusable Components
+            </span>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Navbar */}
+      <div
+        className={`w-full transition-all duration-300 ${
+          scrolled
+            ? "bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-md border-b border-gray-200/80 dark:border-gray-800"
+            : "bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm border-b border-gray-100 dark:border-gray-800/60"
+        }`}
+      >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Brand Logo */}
@@ -158,6 +189,7 @@ export const Navbar: React.FC = () => {
           </div>
         </div>
       )}
+      </div>
     </header>
   );
 };
