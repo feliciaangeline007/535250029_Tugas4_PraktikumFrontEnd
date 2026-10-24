@@ -27,7 +27,7 @@ import {
   Zap,
 } from "lucide-react";
 
-// Tipe props untuk halaman dynamic route di Next.js App Router
+// Tipe props untuk halaman dynamic route
 interface ServiceDetailPageProps {
   params: {
     slug: string;

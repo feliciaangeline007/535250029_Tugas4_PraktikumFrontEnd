@@ -33,13 +33,6 @@ export const Footer: React.FC = () => {
               </p>
             </div>
           </div>
-
-          <div className="shrink-0 flex items-center gap-2">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-800/80 border border-slate-700/80 text-xs text-slate-300 font-medium">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-              <span>Next.js App Router</span>
-            </span>
-          </div>
         </div>
 
         {/* Footer Navigation Columns */}

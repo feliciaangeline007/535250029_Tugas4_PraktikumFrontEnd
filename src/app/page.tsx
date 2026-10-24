@@ -79,10 +79,6 @@ export default function HomePage() {
             <div className="pt-6 flex flex-wrap justify-center gap-4 sm:gap-8 text-xs sm:text-sm text-gray-500 dark:text-gray-400 font-medium">
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-emerald-500" />
-                <span>Next.js App Router</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-emerald-500" />
                 <span>Dynamic Routing [slug]</span>
               </div>
               <div className="flex items-center gap-2">

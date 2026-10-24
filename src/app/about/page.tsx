@@ -99,7 +99,7 @@ export default function AboutPage() {
               Penerapan Konsep Pemrograman Front-End Modern
             </h2>
             <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
-              Website profil perusahaan ini dikembangkan sebagai implementasi praktikum untuk mempraktikkan konsep <strong>Dynamic Routing</strong>, pembuatan <strong>Reusable Components</strong>, styling <strong>Active Link</strong>, dan tata letak <strong>Responsif</strong> menggunakan Next.js App Router.
+              Website profil perusahaan ini dikembangkan sebagai implementasi praktikum untuk mempraktikkan konsep <strong>Dynamic Routing</strong>, pembuatan <strong>Reusable Components</strong>, styling <strong>Active Link</strong>, dan tata letak <strong>Responsif</strong>.
             </p>
             <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
               Seluruh struktur komponen disusun secara modular di dalam direktori <code>src/components/</code> dan data konten dipisahkan ke <code>src/data/</code> agar mudah dipelihara dan dikembangkan lebih lanjut.
