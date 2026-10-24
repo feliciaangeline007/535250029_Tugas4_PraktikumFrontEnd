@@ -1,0 +1,132 @@
+import React from "react";
+import Link from "next/link";
+import { companyProfile, navigationItems } from "@/data/company";
+import { servicesData } from "@/data/services";
+import {
+  Sparkles,
+  MapPin,
+  Phone,
+  Mail,
+  Clock,
+  ArrowRight,
+  GraduationCap,
+} from "lucide-react";
+
+export const Footer: React.FC = () => {
+  return (
+    <footer className="bg-gray-950 text-gray-300 border-t border-gray-800">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+          {/* Col 1 & 2: Company Profile */}
+          <div className="lg:col-span-2 space-y-4">
+            <Link
+              href="/"
+              className="inline-flex items-center gap-2.5 group focus:outline-none"
+            >
+              <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-cyan-500 flex items-center justify-center text-white shadow-md shadow-blue-500/25">
+                <Sparkles className="w-5 h-5" />
+              </div>
+              <span className="font-bold text-xl text-white tracking-tight">
+                {companyProfile.name}
+              </span>
+            </Link>
+            <p className="text-sm text-gray-400 leading-relaxed max-w-sm">
+              {companyProfile.tagline}. Solusi rekayasa perangkat lunak berkelas dunia untuk mempercepat pertumbuhan bisnis Anda.
+            </p>
+
+            <div className="pt-2 space-y-2 text-xs text-gray-400">
+              <div className="flex items-start gap-2.5">
+                <MapPin className="w-4 h-4 text-blue-400 shrink-0 mt-0.5" />
+                <span>{companyProfile.fullAddress}</span>
+              </div>
+              <div className="flex items-center gap-2.5">
+                <Phone className="w-4 h-4 text-blue-400 shrink-0" />
+                <span>{companyProfile.phone} / WA: {companyProfile.whatsapp}</span>
+              </div>
+              <div className="flex items-center gap-2.5">
+                <Mail className="w-4 h-4 text-blue-400 shrink-0" />
+                <span>{companyProfile.email}</span>
+              </div>
+              <div className="flex items-center gap-2.5">
+                <Clock className="w-4 h-4 text-blue-400 shrink-0" />
+                <span>{companyProfile.hours}</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Col 3: Navigasi Cepat */}
+          <div>
+            <h4 className="text-white text-sm font-semibold tracking-wider uppercase mb-4">
+              Navigasi Cepat
+            </h4>
+            <ul className="space-y-2.5 text-sm">
+              {navigationItems.map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className="hover:text-blue-400 transition-colors inline-flex items-center gap-1.5 group"
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-blue-500/60 group-hover:bg-blue-400 transition-colors" />
+                    <span>{item.label}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Col 4: Layanan Unggulan */}
+          <div>
+            <h4 className="text-white text-sm font-semibold tracking-wider uppercase mb-4">
+              Layanan Utama
+            </h4>
+            <ul className="space-y-2.5 text-sm">
+              {servicesData.slice(0, 5).map((service) => (
+                <li key={service.slug}>
+                  <Link
+                    href={`/services/${service.slug}`}
+                    className="hover:text-blue-400 transition-colors inline-flex items-center gap-1 group"
+                  >
+                    <ArrowRight className="w-3.5 h-3.5 text-gray-500 group-hover:text-blue-400 group-hover:translate-x-0.5 transition-all" />
+                    <span className="line-clamp-1">{service.title}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Col 5: Identitas Mahasiswa */}
+          <div className="bg-gray-900/80 p-5 rounded-2xl border border-gray-800 space-y-3">
+            <div className="flex items-center gap-2 text-blue-400 text-xs font-semibold uppercase tracking-wider">
+              <GraduationCap className="w-4 h-4" />
+              <span>Project Mahasiswa</span>
+            </div>
+            <div className="text-xs space-y-1 text-gray-300">
+              <p className="font-semibold text-white text-sm">
+                {companyProfile.studentInfo.name}
+              </p>
+              <p className="font-mono text-blue-400">
+                NIM: {companyProfile.studentInfo.nim}
+              </p>
+              <p className="text-gray-400">
+                {companyProfile.studentInfo.university}
+              </p>
+              <p className="text-[11px] text-gray-400 pt-1 border-t border-gray-800">
+                {companyProfile.studentInfo.assignment}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="mt-12 pt-8 border-t border-gray-900 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-400 gap-4">
+          <p>
+            &copy; {new Date().getFullYear()} {companyProfile.name}. All rights reserved.
+          </p>
+          <p className="flex items-center gap-1 text-gray-400">
+            Dibuat dengan Next.js App Router, Tailwind CSS &amp; TypeScript
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+};
