@@ -8,11 +8,14 @@ import { Button } from "@/components/ui/Button";
 import { Menu, X, ArrowUpRight, Sparkles, GraduationCap } from "lucide-react";
 
 export const Navbar: React.FC = () => {
+  // Hook bawaan Next.js untuk membaca path URL saat ini
   const pathname = usePathname();
+  // State untuk buka/tutup menu hamburger di layar ponsel
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  // State untuk efek background saat halaman di-scroll
   const [scrolled, setScrolled] = useState(false);
 
-  // Monitor scroll for shadow & blur effect
+  // Efek scroll listener untuk mengubah background navbar saat di-scroll
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
@@ -21,11 +24,13 @@ export const Navbar: React.FC = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close mobile menu on route change
+  // Otomatis menutup menu mobile setiap kali rute URL berpindah
   useEffect(() => {
     setMobileMenuOpen(false);
   }, [pathname]);
 
+  // Logika Active Link Styling:
+  // Cek apakah href menu cocok dengan pathname URL browser saat ini
   const isActiveLink = (href: string) => {
     if (href === "/") {
       return pathname === "/";

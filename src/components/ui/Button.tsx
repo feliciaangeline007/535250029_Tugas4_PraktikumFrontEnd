@@ -9,6 +9,9 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
 }
 
+// Komponen Reusable Button:
+// Mendukung berbagai varian tampilan (primary, secondary, outline, ghost)
+// serta mendukung navigasi internal Next.js via prop href (<Link>)
 export const Button: React.FC<ButtonProps> = ({
   children,
   variant = "primary",
@@ -17,10 +20,11 @@ export const Button: React.FC<ButtonProps> = ({
   className = "",
   ...props
 }) => {
+  // Styling dasar tombol dengan transisi interaktif dan rounded corners
   const baseStyles =
     "group relative inline-flex items-center justify-center font-semibold rounded-xl overflow-hidden cursor-pointer select-none transition-all duration-300 ease-out focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none active:scale-[0.96] active:translate-y-0";
 
-  // Subtle glass shimmer / sheen glide on hover
+  // Efek kilauan halus (sheen) saat tombol di-hover
   const shimmerEffect =
     "before:absolute before:inset-0 before:-translate-x-full hover:before:translate-x-full before:bg-gradient-to-r before:from-transparent before:via-white/25 before:to-transparent before:transition-transform before:duration-700 before:ease-in-out";
 

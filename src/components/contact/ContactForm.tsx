@@ -4,17 +4,20 @@ import React, { useState } from "react";
 import { Button } from "@/components/ui/Button";
 import { Send, CheckCircle2 } from "lucide-react";
 
+// Komponen Reusable Form Kontak Interaktif
+// Menangani state input pengguna dan pesan sukses pengiriman
 export const ContactForm: React.FC = () => {
   const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    service: "web-development",
+    service: "company-profile",
     message: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    // Simulasi pengiriman data form
     setSubmitted(true);
   };
 
@@ -30,17 +33,17 @@ export const ContactForm: React.FC = () => {
   return (
     <div className="bg-white dark:bg-gray-900/80 rounded-2xl border border-gray-200 dark:border-gray-800 p-6 sm:p-8 shadow-sm">
       {submitted ? (
-        <div className="py-12 text-center space-y-4">
-          <div className="w-16 h-16 bg-emerald-100 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 rounded-full flex items-center justify-center mx-auto">
-            <CheckCircle2 className="w-8 h-8" />
+        <div className="py-10 text-center space-y-3">
+          <div className="w-14 h-14 bg-emerald-100 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 rounded-full flex items-center justify-center mx-auto">
+            <CheckCircle2 className="w-7 h-7" />
           </div>
-          <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
-            Pesan Terkirim!
+          <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+            Pesan Berhasil Dikirim!
           </h3>
-          <p className="text-sm text-gray-600 dark:text-gray-300 max-w-md mx-auto">
-            Terima kasih, <strong>{formData.name}</strong>. Tim konsultasi kami akan merespons pesan Anda via email (<strong>{formData.email}</strong>) dalam kurun waktu 1x24 jam kerja.
+          <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 max-w-sm mx-auto leading-relaxed">
+            Terima kasih, <strong>{formData.name}</strong>. Pesan Anda sudah kami terima dan akan kami balas ke alamat email <strong>{formData.email}</strong>.
           </p>
-          <div className="pt-4">
+          <div className="pt-3">
             <Button
               variant="outline"
               size="sm"
@@ -49,7 +52,7 @@ export const ContactForm: React.FC = () => {
                 setFormData({
                   name: "",
                   email: "",
-                  service: "web-development",
+                  service: "company-profile",
                   message: "",
                 });
               }}
@@ -59,11 +62,11 @@ export const ContactForm: React.FC = () => {
           </div>
         </div>
       ) : (
-        <form onSubmit={handleSubmit} className="space-y-5">
+        <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label
               htmlFor="name"
-              className="block text-sm font-semibold text-gray-700 dark:text-gray-200 mb-1.5"
+              className="block text-xs font-bold text-gray-700 dark:text-gray-200 mb-1"
             >
               Nama Lengkap
             </label>
@@ -75,16 +78,16 @@ export const ContactForm: React.FC = () => {
               value={formData.name}
               onChange={handleChange}
               placeholder="Contoh: Felicia Angeline"
-              className="w-full rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-800/50 px-4 py-2.5 text-sm text-gray-900 dark:text-white focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
+              className="w-full rounded-xl border border-gray-300 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-800/50 px-3.5 py-2.5 text-xs sm:text-sm text-gray-900 dark:text-white focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
             />
           </div>
 
           <div>
             <label
               htmlFor="email"
-              className="block text-sm font-semibold text-gray-700 dark:text-gray-200 mb-1.5"
+              className="block text-xs font-bold text-gray-700 dark:text-gray-200 mb-1"
             >
-              Alamat Email Kerja
+              Alamat Email
             </label>
             <input
               type="email"
@@ -93,40 +96,40 @@ export const ContactForm: React.FC = () => {
               required
               value={formData.email}
               onChange={handleChange}
-              placeholder="nama@perusahaan.co.id"
-              className="w-full rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-800/50 px-4 py-2.5 text-sm text-gray-900 dark:text-white focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
+              placeholder="nama@email.com"
+              className="w-full rounded-xl border border-gray-300 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-800/50 px-3.5 py-2.5 text-xs sm:text-sm text-gray-900 dark:text-white focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
             />
           </div>
 
           <div>
             <label
               htmlFor="service"
-              className="block text-sm font-semibold text-gray-700 dark:text-gray-200 mb-1.5"
+              className="block text-xs font-bold text-gray-700 dark:text-gray-200 mb-1"
             >
-              Layanan yang Dibutuhkan
+              Layanan yang Diinginkan
             </label>
             <select
               id="service"
               name="service"
               value={formData.service}
               onChange={handleChange}
-              className="w-full rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-800/50 px-4 py-2.5 text-sm text-gray-900 dark:text-white focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
+              className="w-full rounded-xl border border-gray-300 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-800/50 px-3.5 py-2.5 text-xs sm:text-sm text-gray-900 dark:text-white focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
             >
-              <option value="web-development">Pengembangan Web Modern</option>
-              <option value="mobile-apps">Aplikasi Mobile Multiplatform</option>
-              <option value="ui-ux-design">Desain UI/UX &amp; Riset</option>
-              <option value="cloud-infrastructure">Cloud Architecture &amp; DevOps</option>
-              <option value="data-analytics">Data Analytics &amp; BI</option>
-              <option value="cyber-security">Keamanan Siber &amp; IT Audit</option>
+              <option value="landing-page">Pembuatan Landing Page Promosi</option>
+              <option value="company-profile">Website Company Profile</option>
+              <option value="toko-online">Toko Online Sederhana</option>
+              <option value="ui-ux-design">Desain UI/UX &amp; Prototype Figma</option>
+              <option value="web-custom">Pengembangan Web Kustom</option>
+              <option value="maintenance-seo">Pemeliharaan Website &amp; SEO</option>
             </select>
           </div>
 
           <div>
             <label
               htmlFor="message"
-              className="block text-sm font-semibold text-gray-700 dark:text-gray-200 mb-1.5"
+              className="block text-xs font-bold text-gray-700 dark:text-gray-200 mb-1"
             >
-              Detail Kebutuhan / Pesan
+              Pesan atau Rencana Website
             </label>
             <textarea
               id="message"
@@ -135,14 +138,14 @@ export const ContactForm: React.FC = () => {
               required
               value={formData.message}
               onChange={handleChange}
-              placeholder="Ceritakan gambaran singkat kebutuhan proyek atau sistem yang ingin dibangun..."
-              className="w-full rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-800/50 px-4 py-2.5 text-sm text-gray-900 dark:text-white focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 resize-none"
+              placeholder="Ceritakan gambaran singkat website yang ingin dibuat atau pertanyaan Anda..."
+              className="w-full rounded-xl border border-gray-300 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-800/50 px-3.5 py-2.5 text-xs sm:text-sm text-gray-900 dark:text-white focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 resize-none"
             />
           </div>
 
-          <Button type="submit" variant="primary" size="lg" className="w-full">
-            <span>Kirim Pesan Konsultasi</span>
-            <Send className="w-4 h-4 ml-1" />
+          <Button type="submit" variant="primary" size="md" className="w-full">
+            <span>Kirim Pesan</span>
+            <Send className="w-3.5 h-3.5 ml-1" />
           </Button>
         </form>
       )}

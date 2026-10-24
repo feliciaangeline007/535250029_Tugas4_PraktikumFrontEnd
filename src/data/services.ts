@@ -1,318 +1,322 @@
 import { Service } from "@/types";
 
+// Data katalog layanan studio web Nusantara Tech
+// Dibuat untuk demonstrasi dynamic routing Next.js pada Tugas Praktikum 4
 export const servicesData: Service[] = [
   {
-    slug: "web-development",
-    title: "Pengembangan Web Modern",
+    slug: "landing-page",
+    title: "Pembuatan Landing Page Promosi",
     shortDescription:
-      "Membangun website enterprise, web app interaktif, dan portal bisnis dengan arsitektur performa tinggi serta SEO-friendly.",
+      "Website satu halaman (one-page) yang fokus untuk promosi produk, event, atau jasa agar pengunjung tertarik menghubungi bisnis Anda.",
     fullDescription:
-      "Kami merancang dan mengembangkan website modern dengan memanfaatkan teknologi mutakhir seperti Next.js, React, Node.js, dan Tailwind CSS. Kami menjamin kecepatan rendering optimal, keamanan kelas enterprise, serta skalabilitas sistem yang siap berkembang bersama bisnis Anda.",
-    iconName: "Code2",
-    category: "Development",
-    priceEstimate: "Mulai dari Rp 15.000.000",
-    timeline: "3 - 6 Minggu",
+      "Layanan pembuatan landing page yang dirancang khusus untuk meningkatkan penjualan atau pendaftaran produk. Kami menyusun struktur visual yang rapi, copywriting yang jelas, dan tombol call-to-action yang mudah diakses di smartphone maupun laptop.",
+    iconName: "Palette",
+    category: "Website",
+    priceEstimate: "Mulai dari Rp 1.500.000",
+    timeline: "3 - 7 Hari Kerja",
     features: [
-      "Arsitektur Jamstack & Server-Side Rendering (SSR)",
-      "Desain Responsif untuk Mobile, Tablet & Desktop",
-      "Optimasi Core Web Vitals & SEO On-Page",
-      "Integrasi CMS Headless & Restful API / GraphQL",
-      "Sistem Keamanan SSL, Proteksi CSRF & Sanitasi Data",
+      "Desain modern dan responsif (ramah tampilan HP & laptop)",
+      "Navigasi smooth scrolling ke setiap section halaman",
+      "Integrasi tombol langsung ke WhatsApp bisnis",
+      "Kecepatan loading cepat dengan Next.js",
+      "Setup form pendaftaran atau pemesanan langsung",
     ],
     deliverables: [
-      "Full Source Code & Dokumentasi Teknis",
-      "Setup Hosting & CI/CD Pipeline Otomatis",
-      "Garansi Bug-Free & Dukungan Pemeliharaan 3 Bulan",
-      "Pelatihan Pengelolaan Konten untuk Tim Internal",
+      "File source code project lengkap",
+      "Bantuan upload ke hosting / domain (Vercel atau Netlify)",
+      "Garansi revisi minor 14 hari setelah selesai",
+      "Panduan singkat cara mengganti teks dan foto",
     ],
     process: [
       {
         step: 1,
-        title: "Discovery & Blueprint",
+        title: "Diskusi & Pengumpulan Materi",
         description:
-          "Menganalisis kebutuhan bisnis, persona pengguna, dan menyusun arsitektur sistem yang tepat.",
+          "Mengumpulkan logo, foto produk, teks penjelasan, dan kontak yang ingin ditampilkan.",
       },
       {
         step: 2,
-        title: "Prototyping & UI/UX",
+        title: "Pembuatan Desain Antarmuka",
         description:
-          "Merancang wireframe dan visual interface interaktif sesuai identitas brand.",
+          "Menyusun tata letak (layout) dan skema warna yang sesuai dengan tema bisnis Anda.",
       },
       {
         step: 3,
-        title: "Full-Stack Development",
+        title: "Koding & Integrasi",
         description:
-          "Implementasi kode modular, reusable components, dan integrasi backend API.",
+          "Membuat halaman web menggunakan Next.js dan Tailwind CSS agar cepat dan responsif.",
       },
       {
         step: 4,
-        title: "QA & Deployment",
+        title: "Uji Coba & Serah Terima",
         description:
-          "Pengujian performa, kompatibilitas browser, dan deployment ke cloud environment.",
+          "Mengetes tampilan di berbagai ukuran layar dan menghubungkan ke domain utama.",
       },
     ],
   },
   {
-    slug: "mobile-apps",
-    title: "Aplikasi Mobile Multiplatform",
+    slug: "company-profile",
+    title: "Website Profil Perusahaan (Company Profile)",
     shortDescription:
-      "Pengembangan aplikasi iOS dan Android performa tinggi dengan pengalaman pengguna yang mulus dan responsif.",
+      "Website multi-halaman profesional untuk memperkenalkan profil perusahaan, visi misi, legalitas, dan layanan kepada calon klien.",
     fullDescription:
-      "Solusi aplikasi seluler end-to-end yang menjembatani bisnis Anda dengan pelanggan di mana pun berada. Dibangun menggunakan React Native dan Flutter untuk efisiensi biaya tanpa mengorbankan performa native.",
-    iconName: "Smartphone",
-    category: "Development",
-    priceEstimate: "Mulai dari Rp 25.000.000",
-    timeline: "6 - 10 Minggu",
+      "Solusi website profil perusahaan lengkap untuk meningkatkan kredibilitas bisnis Anda di mata klien dan partner. Terdiri dari beberapa halaman utama seperti Beranda, Tentang Kami, Galeri Layanan, dan Kontak dengan tata letak yang bersih dan terstruktur.",
+    iconName: "Code2",
+    category: "Website",
+    priceEstimate: "Mulai dari Rp 3.000.000",
+    timeline: "1 - 2 Minggu",
     features: [
-      "Dukungan Cross-Platform iOS dan Android dalam 1 Codebase",
-      "Fitur Offline-First dan Sinkronisasi Data Otomatis",
-      "Push Notification & Integrasi Payment Gateway",
-      "Autentikasi Biometrik (Fingerprint & FaceID)",
-      "Performa Native 60 FPS yang Ringan dan Responsif",
+      "Struktur multi-halaman rapi (Beranda, Profil, Layanan, Kontak)",
+      "Navigasi antar-halaman mulus dengan Next.js Link",
+      "Form kontak interaktif dengan pesan konfirmasi",
+      "Optimasi SEO dasar agar mudah ditemukan di Google",
+      "Desain adaptif untuk perangkat mobile, tablet, dan desktop",
     ],
     deliverables: [
-      "File APK/AAB (Android) dan IPA (iOS)",
-      "Bantuan Submission ke Google Play Store & Apple App Store",
-      "Dokumentasi API & Backend Dashboard",
-      "Dukungan Pemeliharaan 6 Bulan Pasca Launching",
+      "Source code website terstruktur rapi",
+      "Konfigurasi domain kustom (.com atau .co.id)",
+      "Setup email bisnis (nama@perusahaan.com)",
+      "Dukungan teknis pemeliharaan selama 1 bulan",
     ],
     process: [
       {
         step: 1,
-        title: "Spesifikasi Teknis",
+        title: "Penyusunan Struktur Menu",
         description:
-          "Penyelarasan flow aplikasi dan penentuan arsitektur data seluler.",
+          "Menentukan halaman-halaman apa saja yang dibutuhkan dan alur navigasi website.",
       },
       {
         step: 2,
-        title: "Desain Antarmuka Mobile",
+        title: "Desain Mockup",
         description:
-          "Pembuatan desain UI yang mematuhi standar Human Interface Guidelines & Material 3.",
+          "Membuat rancangan tampilan halaman utama dan halaman pendukung.",
       },
       {
         step: 3,
-        title: "Coding & SDK Integration",
+        title: "Pemrograman Komponen",
         description:
-          "Pengembangan fitur inti, integrasi payment gateway, dan analitik.",
+          "Membangun reusable components (Navbar, Card, Footer) dan rute antar halaman.",
       },
       {
         step: 4,
-        title: "Store Publishing",
+        title: "Peluncuran Website",
         description:
-          "Review kepatuhan app store hingga rilis live untuk publik.",
+          "Pengecekan akhir, pengujian link, dan publikasi website ke internet.",
+      },
+    ],
+  },
+  {
+    slug: "toko-online",
+    title: "Pembuatan Website Toko Online Sederhana",
+    shortDescription:
+      "Katalog produk digital interaktif lengkap dengan foto, deskripsi harga, dan pemesanan langsung lewat WhatsApp.",
+    fullDescription:
+      "Bagi pemilik usaha kuliner, fashion, atau retail yang ingin menampilkan produk dagangan secara rapi tanpa ribet. Dilengkapi fitur pencarian produk, filter kategori, dan tombol pesan otomatis yang menyertakan rincian produk ke WhatsApp admin.",
+    iconName: "Smartphone",
+    category: "E-Commerce",
+    priceEstimate: "Mulai dari Rp 4.500.000",
+    timeline: "2 - 3 Minggu",
+    features: [
+      "Katalog produk dinamis dengan foto detail dan harga",
+      "Filter kategori produk dan fitur pencarian sederhana",
+      "Tombol 'Pesan Sekarang' terhubung otomatis ke WhatsApp",
+      "Desain mobile-friendly yang nyaman dibuka di smartphone pelanggan",
+      "Halaman rincian produk dinamis (dynamic routing)",
+    ],
+    deliverables: [
+      "Website toko online siap pakai",
+      "Format data produk (JSON/CMS) yang mudah diupdate sendiri",
+      "Setup integrasi WhatsApp Business",
+      "Panduan video cara menambah produk baru",
+    ],
+    process: [
+      {
+        step: 1,
+        title: "Pendataan Produk",
+        description:
+          "Mengumpulkan daftar foto produk, harga, varian, dan nomor WhatsApp pemesanan.",
+      },
+      {
+        step: 2,
+        title: "Penyusunan Komponen Katalog",
+        description:
+          "Membuat komponen kartu produk, pagination, dan halaman detail dinamis.",
+      },
+      {
+        step: 3,
+        title: "Pengujian Alur Checkout",
+        description:
+          "Memastikan pesan WhatsApp yang masuk berisi nama barang dan harga dengan tepat.",
+      },
+      {
+        step: 4,
+        title: "Serah Terima & Training",
+        description:
+          "Melatih admin toko cara memperbarui daftar barang dagangan.",
       },
     ],
   },
   {
     slug: "ui-ux-design",
-    title: "Desain UI/UX & Riset Pengguna",
+    title: "Jasa Desain UI/UX & Prototyping Figma",
     shortDescription:
-      "Riset mendalam dan perancangan antarmuka visual yang estetik, intuitif, dan terbukti meningkatkan konversi bisnis.",
+      "Perancangan antarmuka aplikasi web dan mobile di Figma yang menarik, mudah dipahami pengguna, dan siap dikoding.",
     fullDescription:
-      "Kami memadukan pendekatan human-centered design dengan estetika visual modern. Dari user journey mapping, clickable high-fidelity prototype, hingga design system yang komprehensif, kami memastikan produk Anda dicintai pengguna.",
+      "Sebelum mulai menulis kode, rancang tampilan website atau aplikasi Anda terlebih dahulu. Kami membantu membuat wireframe, skema warna, tipografi, serta prototipe interaktif yang bisa diklik langsung di Figma untuk memvalidasi ide Anda ke pengguna.",
     iconName: "Palette",
     category: "Design",
-    priceEstimate: "Mulai dari Rp 10.000.000",
-    timeline: "2 - 4 Minggu",
+    priceEstimate: "Mulai dari Rp 2.000.000",
+    timeline: "1 - 2 Minggu",
     features: [
-      "Riset Pengguna, Analisis Kompetitor & Empathy Mapping",
-      "Information Architecture & User Flow Mapping",
-      "Interactive High-Fidelity Prototype di Figma",
-      "Design System Komprehensif (Komponen, Warna, Tipografi)",
-      "Usability Testing dengan Calon Pengguna Riil",
+      "Riset tampilan referensi dan analisis alur pengguna",
+      "Wireframe hitam-putih untuk menentukan susunan elemen",
+      "Desain visual penuh (High Fidelity) dengan Figma",
+      "Prototype yang dapat diklik dan disimulasikan alurnya",
+      "Design system mini (variabel warna, font, dan tombol)",
     ],
     deliverables: [
-      "File Master Figma beserta Variabel & Komponen",
-      "Design System Guide untuk Tim Pengembang",
-      "Laporan Riset & Rekomendasi UX",
-      "Asset Gambar, Icon SVG, dan Ilustrasi Siap Pakai",
+      "File master Figma (.fig) lengkap dengan komponen",
+      "Aset gambar format SVG dan PNG berkualitas tinggi",
+      "Tautan prototipe interaktif untuk presentasi",
+      "Dokumentasi panduan untuk programmer (Hand-off)",
     ],
     process: [
       {
         step: 1,
-        title: "Empathize & Research",
+        title: "Briefing Konsep",
         description:
-          "Wawancara pengguna dan pemetaan pain-points pada flow lama.",
+          "Membahas target pengguna, fitur utama, dan inspirasi desain yang diinginkan.",
       },
       {
         step: 2,
-        title: "Wireframing",
+        title: "Pembuatan Wireframe",
         description:
-          "Eksplorasi tata letak dan navigasi secara low-fidelity.",
+          "Merancang sketsa dasar tata letak informasi sebelum masuk ke tahap visual.",
       },
       {
         step: 3,
-        title: "Visual & Design System",
+        title: "Visual Design & Prototyping",
         description:
-          "Pemberian visual modern, styling konsisten, dan prototipe interaktif.",
+          "Mewarnai desain, memilih ikon yang pas, dan menyambungkan alur klik antar layar.",
       },
       {
         step: 4,
-        title: "Validation & Hand-off",
+        title: "Review & Revisi",
         description:
-          "Usability testing dan serah terima dokumen siap koding.",
+          "Memperbaiki feedback dari klien hingga desain benar-benar siap dikembangkan.",
       },
     ],
   },
   {
-    slug: "cloud-infrastructure",
-    title: "Cloud Architecture & DevOps",
+    slug: "web-custom",
+    title: "Pengembangan Aplikasi Web Kustom",
     shortDescription:
-      "Modernisasi infrastruktur server cloud dengan otomasi CI/CD, containerization Docker/Kubernetes, dan keamanan tinggi.",
+      "Pembuatan dashboard admin, sistem absensi, kasir sederhana (POS), atau portal internal sesuai alur kerja bisnis Anda.",
     fullDescription:
-      "Tingkatkan reliabilitas dan kecepatan rilis produk Anda dengan infrastruktur cloud berbasis AWS, Google Cloud, atau Azure. Kami menerapkan praktik Infrastructure as Code (IaC) dan CI/CD otomatis untuk meminimalkan downtime.",
+      "Jika website template tidak cukup memenuhi kebutuhan alur operasional Anda, kami membuatkan aplikasi web berbasis React, Next.js, dan database terintegrasi. Mempermudah pencatatan transaksi, rekap laporan, dan manajemen hak akses pengguna.",
     iconName: "CloudCog",
-    category: "Infrastructure",
-    priceEstimate: "Mulai dari Rp 18.000.000",
+    category: "Development",
+    priceEstimate: "Mulai dari Rp 6.000.000",
     timeline: "3 - 5 Minggu",
     features: [
-      "Automated CI/CD Pipeline dengan GitHub Actions & GitLab CI",
-      "Container Orchestration menggunakan Docker & Kubernetes",
-      "Setup Infrastructure as Code (IaC) dengan Terraform",
-      "Monitoring & Alerting 24/7 (Prometheus, Grafana, Datadog)",
-      "High Availability, Auto-Scaling & Disaster Recovery Setup",
+      "Sistem login dan manajemen akun pengguna",
+      "Halaman dashboard dengan ringkasan data tabel dan grafik",
+      "Fitur CRUD (Tambah, Edit, Hapus, dan Lihat Data)",
+      "Ekspor laporan ke file Excel atau PDF",
+      "Koneksi aman ke database (PostgreSQL / MySQL / Supabase)",
     ],
     deliverables: [
-      "Script Terraform / Ansible Teruji",
-      "Pipeline CI/CD Siap Pakai",
-      "Dashboard Monitoring Metrik Server",
-      "SOP Incident Response & Disaster Recovery",
+      "Full source code aplikasi web kustom",
+      "Setup database dan server cloud (Vercel / Railway / Supabase)",
+      "Dokumentasi API dan kamus basis data",
+      "Garansi pemeliharaan bug selama 2 bulan",
     ],
     process: [
       {
         step: 1,
-        title: "Audit Infrastruktur",
+        title: "Pemetaan Alur Data",
         description:
-          "Evaluasi beban trafik dan celah inefisiensi arsitektur saat ini.",
+          "Menentukan tabel data, relasi, dan form input apa saja yang diperlukan.",
       },
       {
         step: 2,
-        title: "Arsitektur Target",
+        title: "Desain Database & API",
         description:
-          "Merancang topologi multi-region yang hemat biaya dan aman.",
+          "Menyiapkan struktur database yang aman dan endpoint rute data.",
       },
       {
         step: 3,
-        title: "Automated Provisioning",
+        title: "Frontend & Backend Integration",
         description:
-          "Menjalankan script konfigurasi infrastruktur dan container.",
+          "Menghubungkan form input di antarmuka web dengan penyimpanan database.",
       },
       {
         step: 4,
-        title: "Stress Testing & Hand-over",
+        title: "User Testing & Rilis",
         description:
-          "Simulasi load test dan penyerahan kredensial aman.",
+          "Menguji alur kerja bersama pengguna akhir sebelum dipakai operasional resmi.",
       },
     ],
   },
   {
-    slug: "data-analytics",
-    title: "Data Analytics & Business Intelligence",
+    slug: "maintenance-seo",
+    title: "Pemeliharaan Website & Optimasi SEO",
     shortDescription:
-      "Transformasi data mentah bisnis menjadi wawasan strategis melalui dashboard interaktif dan integrasi analitik cerdas.",
+      "Jasa perawatan rutin, pembaruan konten, backup berkala, dan peningkatan skor kecepatan website Anda.",
     fullDescription:
-      "Bantu manajemen perusahaan Anda mengambil keputusan yang lebih tepat dan berbasis data. Kami membangun data warehouse, pipeline ETL, dan dashboard visual yang mudah dipahami seluruh pemangku kepentingan.",
-    iconName: "BarChart3",
-    category: "Analytics",
-    priceEstimate: "Mulai dari Rp 20.000.000",
-    timeline: "4 - 7 Minggu",
-    features: [
-      "Pipeline ETL Otomatis dari Berbagai Sumber Data Bisnis",
-      "Interactive Executive Dashboard (Looker Studio, PowerBI)",
-      "Analisis Prediktif Tren Penjualan & Churn Pelanggan",
-      "Pembersihan dan Standarisasi Data Master (Data Cleansing)",
-      "Integrasi Tracking Event Pengguna Web & Mobile",
-    ],
-    deliverables: [
-      "Dashboard Real-Time yang Terhubung ke Database",
-      "Dokumentasi Kamus Data & Formula KPI",
-      "Sesi Pelatihan Analisis untuk Tim Manajemen",
-      "Automated Daily & Weekly Report ke Email / Slack",
-    ],
-    process: [
-      {
-        step: 1,
-        title: "KPI Alignment",
-        description:
-          "Menentukan metrik bisnis kunci yang ingin dimonitor.",
-      },
-      {
-        step: 2,
-        title: "Data Pipeline Setup",
-        description:
-          "Mengkoneksikan database operasional ke data repository terpusat.",
-      },
-      {
-        step: 3,
-        title: "Visual Modeling",
-        description:
-          "Membuat chart, filter, dan agregasi data yang responsif.",
-      },
-      {
-        step: 4,
-        title: "Review & Refinement",
-        description:
-          "Validasi akurasi data dan optimasi performa query.",
-      },
-    ],
-  },
-  {
-    slug: "cyber-security",
-    title: "Keamanan Siber & IT Audit",
-    shortDescription:
-      "Identifikasi dan perlindungan celah keamanan sistem Anda sebelum disusupi melalui penetration testing komprehensif.",
-    fullDescription:
-      "Layanan pengujian penetrasi keamanan (Penetration Testing) untuk aplikasi web, mobile, dan API. Kami memberikan audit kepatuhan terhadap standar industri serta rekomendasi perbaikan celah (remediation) yang praktis.",
+      "Website Anda lambat atau sering error? Kami membantu merapikan kode, memperbarui versi library, mengompres ukuran gambar, serta menyusun meta tag SEO agar website tampil prima dan tidak tertinggal oleh kompetitor.",
     iconName: "ShieldCheck",
-    category: "Security",
-    priceEstimate: "Mulai dari Rp 22.000.000",
-    timeline: "2 - 4 Minggu",
+    category: "Support",
+    priceEstimate: "Mulai dari Rp 750.000 / bulan",
+    timeline: "Berkala (Bulanan)",
     features: [
-      "Web & Mobile Application Penetration Testing (OWASP Top 10)",
-      "API Security Assessment & Vulnerability Scanning",
-      "Network Penetration Testing & Firewall Review",
-      "Social Engineering Assessment untuk Karyawan",
-      "Laporan Remediasi Lengkap dengan Proof of Concept (PoC)",
+      "Pemeriksaan kesehatan website dan pembaruan dependensi",
+      "Optimasi gambar dan script agar loading lebih cepat",
+      "Penyusunan Open Graph & Meta Tag untuk sharing ke media sosial",
+      "Backup database dan source code rutin setiap minggu",
+      "Laporan perkembangan performa website setiap bulan",
     ],
     deliverables: [
-      "Executive Summary Report untuk Manajemen",
-      "Detailed Technical Report untuk Tim Pengembang",
-      "Langkah-Langkah Perbaikan Step-by-Step",
-      "Gratis Re-Testing Sekali Setelah Patch Diterapkan",
+      "Website tetap aktif dan terhindar dari downtime tak terduga",
+      "Laporan audit skor Google PageSpeed Insights",
+      "File backup berkala yang tersimpan aman di cloud",
+      "Bantuan konsultasi teknis via WhatsApp",
     ],
     process: [
       {
         step: 1,
-        title: "Reconnaissance & Scoping",
+        title: "Audit Awal",
         description:
-          "Menentukan batasan target dan pemindaian port/service awal.",
+          "Mengecek kecepatan saat ini, link yang rusak, dan celah keamanan dasar.",
       },
       {
         step: 2,
-        title: "Vulnerability Scanning",
+        title: "Pembersihan & Optimasi",
         description:
-          "Pendeteksian otomatis kelemahan konfigurasi dan celah library.",
+          "Menghapus aset yang tidak dipakai dan mengompresi gambar berukuran besar.",
       },
       {
         step: 3,
-        title: "Manual Exploitation",
+        title: "Setup Backup Otomatis",
         description:
-          "Pengujian manual secara etis untuk membuktikan dampak celah.",
+          "Mengaktifkan mekanisme pencadangan data secara terjadwal.",
       },
       {
         step: 4,
-        title: "Reporting & Debrief",
+        title: "Monitoring Berkelanjutan",
         description:
-          "Presentasi hasil temuan dan panduan perbaikan keamanan.",
+          "Memantau kinerja web agar selalu cepat dibuka oleh pengunjung.",
       },
     ],
   },
 ];
 
+// Helper function untuk mengambil detail layanan berdasarkan parameter URL slug
 export function getServiceBySlug(slug: string): Service | undefined {
   return servicesData.find((service) => service.slug === slug);
 }
 
+// Helper function untuk generate static paths pada rute dinamis Next.js
 export function getAllServiceSlugs(): string[] {
   return servicesData.map((service) => service.slug);
 }
